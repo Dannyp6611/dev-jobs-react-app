@@ -4,12 +4,15 @@ import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
 import Button from '../components/Button';
 import JobsData from '../data.json';
+import { updateTabTitle } from '../utils/updateTabTitle';
 
 const JobDetails = () => {
   const { id } = useParams();
   const [isLoading, setIsLoading] = useState(false);
 
   const jobData = JobsData.find((job) => job.id == id);
+
+  updateTabTitle(`Devjobs | ${jobData.company} Details`);
 
   if (isLoading) {
     return (
