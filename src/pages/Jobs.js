@@ -5,8 +5,6 @@ import styled from 'styled-components';
 import FilterModal from '../components/FilterModal';
 import JobsData from '../data.json';
 
-console.log(JobsData);
-
 const Jobs = () => {
   const [jobsData, setJobsData] = useState(JobsData);
   const [filteredJobsData, setFilteredJobsData] = useState(JobsData);
